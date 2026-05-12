@@ -5,675 +5,767 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Анаболические стероиды: правда и мифы</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Oswald:wght@500;700&display=swap');
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --navy: #1a3a5c;
-    --blue: #0d5986;
-    --orange: #f97316;
-    --red: #dc2626;
-    --green: #16a34a;
-    --purple: #7c3aed;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Nunito', sans-serif;
-    background: #e8edf2;
-    color: #1e293b;
-    line-height: 1.6;
-  }
-
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    background: var(--navy);
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 24px;
-    height: 52px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-  }
-
-  .nav-title {
-    font-family: 'Oswald', sans-serif;
-    color: #fff;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-  }
-
-  .nav-title span { color: var(--orange); }
-
-  .nav-links {
-    display: flex;
-    gap: 4px;
-  }
-
-  .nav-links a {
-    color: rgba(255,255,255,0.75);
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 20px;
-    transition: all 0.2s;
-  }
-
-  .nav-links a:hover {
-    background: rgba(255,255,255,0.15);
-    color: #fff;
-  }
-
-  /* MAIN */
-  main {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 72px 16px 48px;
-  }
-
-  /* SECTION */
-  .section {
-    background: #fff;
-    border-radius: 16px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-  }
-
-  /* COVER */
-  .cover {
-    background: linear-gradient(140deg, #0d1f35 0%, #1a3a5c 40%, #0d5986 100%);
-    padding: 48px 32px 40px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cover::after {
-    content: '';
-    position: absolute;
-    bottom: -60px; right: -60px;
-    width: 240px; height: 240px;
-    border-radius: 50%;
-    background: rgba(249,115,22,0.08);
-    pointer-events: none;
-  }
-
-  .cover-tag {
-    display: inline-block;
-    background: rgba(255,255,255,0.12);
-    color: rgba(255,255,255,0.85);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    padding: 5px 16px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.2);
-    margin-bottom: 20px;
-  }
-
-  .cover h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: clamp(28px, 5vw, 42px);
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.15;
-    margin-bottom: 10px;
-  }
-
-  .cover h1 span { color: var(--orange); }
-
-  .cover-sub {
-    font-size: 15px;
-    color: rgba(255,255,255,0.7);
-    margin-bottom: 28px;
-  }
-
-  .cover-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 28px;
-    margin: 24px 0;
-  }
-
-  .slogan {
-    display: inline-block;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 10px;
-    padding: 12px 24px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    margin-bottom: 20px;
-  }
-
-  .audience-tags {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .aud-tag {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 20px;
-    padding: 4px 14px;
-    font-size: 11px;
-    color: rgba(255,255,255,0.8);
-    font-weight: 600;
-  }
-
-  /* PAGE HEADER */
-  .page-header {
-    background: var(--navy);
-    padding: 14px 24px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .page-num {
-    background: var(--orange);
-    color: #fff;
-    font-size: 12px;
-    font-weight: 800;
-    width: 28px; height: 28px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .page-header h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    color: #fff;
-    letter-spacing: 0.5px;
-  }
-
-  .page-body { padding: 24px; }
-
-  /* DEFINITION BOX */
-  .def-box {
-    background: #eff6ff;
-    border-left: 4px solid #2563eb;
-    border-radius: 0 10px 10px 0;
-    padding: 14px 18px;
-    margin-bottom: 20px;
-    font-size: 14px;
-    color: #1e40af;
-    line-height: 1.7;
-  }
-
-  /* VS DIAGRAM */
-  .vs-wrap {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: 12px;
-    margin: 16px 0 20px;
-  }
-
-  .vs-side {
-    border-radius: 10px;
-    padding: 16px;
-    font-size: 13px;
-    text-align: center;
-  }
-
-  .vs-side h4 { font-size: 14px; font-weight: 800; margin-bottom: 8px; }
-  .vs-side.nat { background: #f0fdf4; border: 1px solid #86efac; color: #166534; }
-  .vs-side.nat h4 { color: #166534; }
-  .vs-side.ster { background: #fff1f2; border: 1px solid #fecdd3; color: #9f1239; }
-  .vs-side.ster h4 { color: #9f1239; }
-  .vs-label { font-size: 18px; font-weight: 900; color: #94a3b8; text-align: center; }
-
-  .two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-
-  .info-card {
-    border-radius: 10px;
-    padding: 14px;
-    font-size: 13px;
-    line-height: 1.6;
-  }
-
-  .info-card h4 { font-size: 13px; font-weight: 800; margin-bottom: 6px; }
-  .info-card.green { background: #f0fdf4; border: 1px solid #bbf7d0; }
-  .info-card.green h4 { color: #166534; }
-  .info-card.red { background: #fff1f2; border: 1px solid #fecdd3; }
-  .info-card.red h4 { color: #9f1239; }
-  .info-card p { color: #374151; }
-
-  /* MYTH TABLE */
-  .myth-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-
-  .myth-table th {
-    background: var(--navy);
-    color: #fff;
-    padding: 10px 16px;
-    font-size: 12px;
-    font-weight: 700;
-    text-align: left;
-    letter-spacing: 0.5px;
-  }
-
-  .myth-table th:first-child { border-radius: 10px 0 0 0; }
-  .myth-table th:last-child { border-radius: 0 10px 0 0; }
-
-  .myth-table td {
-    padding: 11px 16px;
-    vertical-align: top;
-    border-bottom: 1px solid #f1f5f9;
-    line-height: 1.6;
-  }
-
-  .myth-table tr:nth-child(even) td { background: #f8fafc; }
-  .myth-table tr:last-child td { border-bottom: none; }
-  .myth-table td:first-child { color: #7c3aed; font-weight: 700; }
-  .myth-table td:last-child { color: #166534; }
-
-  /* CONSEQUENCES */
-  .conseq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 12px;
-  }
-
-  .conseq-card {
-    border-radius: 10px;
-    padding: 14px;
-  }
-
-  .conseq-card.phys { background: #fff7ed; border: 1px solid #fed7aa; }
-  .conseq-card.ment { background: #fdf4ff; border: 1px solid #e9d5ff; }
-  .conseq-card.soc { background: #eff6ff; border: 1px solid #bfdbfe; grid-column: 1 / -1; }
-
-  .conseq-card h4 {
-    font-size: 13px;
-    font-weight: 800;
-    margin-bottom: 10px;
-  }
-
-  .conseq-card.phys h4 { color: #c2410c; }
-  .conseq-card.ment h4 { color: #7c3aed; }
-  .conseq-card.soc h4 { color: #1d4ed8; }
-
-  .conseq-card ul {
-    list-style: none;
-    font-size: 13px;
-    color: #374151;
-    line-height: 1.8;
-  }
-
-  .conseq-card ul li::before { content: '→ '; opacity: 0.5; font-weight: 700; }
-
-  .soc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
-
-  /* BODY SVG */
-  .body-wrap {
-    background: #f8fafc;
-    border-radius: 10px;
-    padding: 16px;
-    text-align: center;
-    margin-bottom: 16px;
-    border: 1px solid #e2e8f0;
-  }
-
-  /* REASONS */
-  .reasons-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 18px;
-  }
-
-  .reason-item {
-    background: #fff7ed;
-    border: 1px solid #fed7aa;
-    border-radius: 10px;
-    padding: 12px 14px;
-    font-size: 13px;
-    color: #7c2d12;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    line-height: 1.5;
-  }
-
-  .reason-item.full { grid-column: 1 / -1; }
-  .r-icon { font-size: 20px; flex-shrink: 0; line-height: 1.3; }
-
-  .motivate {
-    background: var(--navy);
-    border-radius: 10px;
-    padding: 16px 20px;
-    color: rgba(255,255,255,0.9);
-    font-size: 14px;
-    line-height: 1.7;
-    font-style: italic;
-    border-left: 4px solid var(--orange);
-  }
-
-  /* SAFE LIST */
-  .safe-list { list-style: none; margin-bottom: 20px; }
-
-  .safe-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 12px 0;
-    border-bottom: 1px solid #f1f5f9;
-    font-size: 13px;
-    color: #374151;
-    line-height: 1.6;
-  }
-
-  .safe-list li:last-child { border-bottom: none; }
-
-  .s-icon {
-    width: 32px; height: 32px;
-    background: #dcfce7;
-    border: 1px solid #86efac;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-
-  .checklist-box {
-    background: #f0fdf4;
-    border: 1px solid #bbf7d0;
-    border-radius: 10px;
-    padding: 16px 20px;
-  }
-
-  .checklist-box h4 {
-    font-size: 13px;
-    font-weight: 800;
-    color: #166534;
-    margin-bottom: 12px;
-  }
-
-  .check-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 6px 0;
-    font-size: 13px;
-    color: #374151;
-  }
-
-  .chk {
-    width: 16px; height: 16px;
-    border: 2px solid #16a34a;
-    border-radius: 4px;
-    flex-shrink: 0;
-  }
-
-  /* HELP */
-  .help-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 16px;
-  }
-
-  .help-card {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    padding: 14px;
-  }
-
-  .help-card h4 {
-    font-size: 13px;
-    font-weight: 800;
-    color: var(--navy);
-    margin-bottom: 6px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .help-card p { font-size: 12px; color: #6b7280; line-height: 1.5; }
-
-  .hotline {
-    background: var(--red);
-    border-radius: 10px;
-    padding: 14px 20px;
-    color: #fff;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 12px;
-  }
-
-  .hotline .number {
-    font-size: 24px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    display: block;
-    margin: 4px 0;
-  }
-
-  .hotline .note { font-size: 11px; opacity: 0.85; font-weight: 400; }
-
-  .parents-box {
-    background: #fffbeb;
-    border: 1px solid #fde68a;
-    border-radius: 10px;
-    padding: 14px 18px;
-    font-size: 13px;
-    color: #78350f;
-    line-height: 1.7;
-    margin-bottom: 16px;
-  }
-
-  .parents-box strong { display: block; font-weight: 800; margin-bottom: 4px; }
-
-  .final-box {
-    background: linear-gradient(135deg, var(--navy), var(--blue));
-    border-radius: 12px;
-    padding: 24px;
-    text-align: center;
-    color: #fff;
-  }
-
-  .final-box .final-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--orange);
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .final-box p { font-size: 14px; line-height: 1.7; opacity: 0.9; }
-
-  /* FOOTER */
-  .page-footer {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 24px;
-    background: #f8fafc;
-    border-top: 1px solid #e2e8f0;
-    font-size: 11px;
-    color: #94a3b8;
-  }
-
-  /* PRINT BTN */
-  .print-btn {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    background: var(--orange);
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 12px 22px;
-    font-size: 13px;
-    font-weight: 800;
-    font-family: 'Nunito', sans-serif;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(249,115,22,0.4);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: transform 0.15s, box-shadow 0.15s;
-    z-index: 99;
-  }
-
-  .print-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(249,115,22,0.5);
-  }
-
-  @media (max-width: 640px) {
-    .two-col, .vs-wrap, .conseq-grid, .reasons-grid, .help-grid { grid-template-columns: 1fr; }
-    .conseq-card.soc { grid-column: auto; }
-    .reason-item.full { grid-column: auto; }
-    .soc-grid { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
-    .cover h1 { font-size: 24px; }
-  }
-
-  @media print {
-    nav, .print-btn { display: none !important; }
-    body { background: #fff; }
-    main { padding: 0; max-width: 100%; }
-    .section { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
-  }
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black: #0a0a0a;
+  --white: #f5f5f0;
+  --red: #c8102e;
+  --gray-1: #1c1c1c;
+  --gray-2: #2e2e2e;
+  --gray-3: #4a4a4a;
+  --gray-4: #888;
+  --gray-5: #d4d4d0;
+  --gray-6: #eaeae6;
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'IBM Plex Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--gray-6);
+  color: var(--black);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: var(--black);
+  z-index: 100;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  border-bottom: 2px solid var(--red);
+}
+
+.nav-brand {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--white);
+  letter-spacing: 0.05em;
+}
+
+.nav-brand b { color: var(--red); }
+
+.nav-links {
+  display: flex;
+  gap: 2px;
+}
+
+.nav-links a {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--gray-4);
+  text-decoration: none;
+  padding: 4px 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.15s;
+  border: 1px solid transparent;
+}
+
+.nav-links a:hover {
+  color: var(--white);
+  border-color: var(--gray-3);
+}
+
+/* MAIN */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 68px 16px 80px;
+}
+
+/* PAGE */
+.page {
+  background: var(--white);
+  margin-bottom: 2px;
+  overflow: hidden;
+}
+
+.page:first-child { border-radius: 0; }
+
+/* COVER */
+.cover {
+  background: var(--black);
+  padding: 64px 48px;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-line {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: var(--red);
+}
+
+.cover-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.cover-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--red);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.cover h1 {
+  font-family: var(--sans);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.cover h1 em {
+  font-style: normal;
+  color: var(--red);
+}
+
+.cover-sub {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--gray-4);
+  margin-top: 16px;
+  max-width: 380px;
+  line-height: 1.6;
+}
+
+.cover-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+
+.slogan {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--white);
+  letter-spacing: 0.08em;
+  border-left: 2px solid var(--red);
+  padding-left: 14px;
+  line-height: 1.8;
+}
+
+.aud-list {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--gray-4);
+  text-align: right;
+  line-height: 2;
+  letter-spacing: 0.05em;
+}
+
+/* PAGE HEADER */
+.ph {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--gray-5);
+}
+
+.ph-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--red);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+}
+
+.ph h2 {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--black);
+  padding: 14px 20px;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+}
+
+/* BODY */
+.pb { padding: 32px 36px; }
+
+/* DEF BOX */
+.def {
+  border: 1px solid var(--black);
+  padding: 18px 22px;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.def::before {
+  content: 'ОПР.';
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--white);
+  background: var(--black);
+  padding: 2px 8px;
+  position: absolute;
+  top: -10px;
+  left: 16px;
+}
+
+.def p { font-size: 13.5px; color: var(--gray-1); line-height: 1.7; }
+.def strong { font-weight: 700; }
+
+/* VS */
+.vs {
+  display: grid;
+  grid-template-columns: 1fr 32px 1fr;
+  gap: 0;
+  margin-bottom: 28px;
+  border: 1px solid var(--gray-5);
+}
+
+.vs-col {
+  padding: 20px;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.vs-col.a { border-right: 1px solid var(--gray-5); }
+.vs-col.b { border-left: 1px solid var(--gray-5); }
+
+.vs-col h4 {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.vs-col.a h4 { color: var(--green, #1a6b3c); }
+.vs-col.b h4 { color: var(--red); }
+
+.vs-mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gray-4);
+  background: var(--gray-6);
+  letter-spacing: 0.05em;
+  writing-mode: vertical-rl;
+}
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--gray-5); border: 1px solid var(--gray-5); }
+
+.tc-card {
+  background: var(--white);
+  padding: 18px 20px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--gray-3);
+}
+
+.tc-card h4 {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.tc-card.ok h4 { color: #1a6b3c; }
+.tc-card.warn h4 { color: var(--red); }
+
+/* MYTH TABLE */
+.mt { width: 100%; border-collapse: collapse; font-size: 13px; }
+
+.mt thead tr { background: var(--black); }
+
+.mt th {
+  padding: 10px 18px;
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mt td {
+  padding: 14px 18px;
+  vertical-align: top;
+  line-height: 1.65;
+  border-bottom: 1px solid var(--gray-5);
+  color: var(--gray-2);
+}
+
+.mt tr:last-child td { border-bottom: none; }
+.mt tr:nth-child(even) td { background: var(--gray-6); }
+.mt td:first-child { color: var(--black); font-weight: 600; }
+.mt td:last-child { color: #1a6b3c; }
+
+/* BODY DIAGRAM */
+.diagram {
+  background: var(--black);
+  padding: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONSEQUENCES */
+.cq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--gray-5);
+  border: 1px solid var(--gray-5);
+  margin-bottom: 1px;
+}
+
+.cq-card {
+  background: var(--white);
+  padding: 18px 20px;
+}
+
+.cq-card.full { grid-column: 1 / -1; }
+
+.cq-card h4 {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--gray-5);
+}
+
+.cq-card.phys h4 { color: var(--red); }
+.cq-card.ment h4 { color: #5b21b6; }
+.cq-card.soc h4 { color: #1e40af; }
+
+.cq-card ul { list-style: none; font-size: 13px; color: var(--gray-2); line-height: 1.9; }
+.cq-card ul li { display: flex; align-items: baseline; gap: 8px; }
+.cq-card ul li::before { content: '—'; color: var(--gray-4); flex-shrink: 0; font-size: 12px; }
+
+.soc-ul { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+
+/* REASONS */
+.rg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--gray-5);
+  border: 1px solid var(--gray-5);
+  margin-bottom: 24px;
+}
+
+.ri {
+  background: var(--white);
+  padding: 16px 18px;
+  font-size: 13px;
+  color: var(--gray-2);
+  line-height: 1.6;
+}
+
+.ri.full { grid-column: 1 / -1; }
+
+.ri-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ri-label::before {
+  content: '';
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: var(--red);
+  flex-shrink: 0;
+}
+
+.quote-block {
+  border-left: 3px solid var(--red);
+  padding: 16px 20px;
+  background: var(--gray-6);
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--gray-1);
+  line-height: 1.75;
+}
+
+/* SAFE */
+.safe-list { list-style: none; margin-bottom: 28px; border: 1px solid var(--gray-5); }
+
+.safe-list li {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  border-bottom: 1px solid var(--gray-5);
+}
+
+.safe-list li:last-child { border-bottom: none; }
+
+.si-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gray-4);
+  background: var(--gray-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--gray-5);
+  padding: 16px 0;
+}
+
+.si-body {
+  padding: 16px 18px;
+  font-size: 13px;
+  color: var(--gray-2);
+  line-height: 1.65;
+}
+
+.si-body strong { font-weight: 700; color: var(--black); }
+
+.cl-box {
+  border: 1px solid var(--black);
+  padding: 20px 24px;
+}
+
+.cl-box h4 {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+
+.cl-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 0;
+  font-size: 13px;
+  color: var(--gray-2);
+  border-bottom: 1px solid var(--gray-6);
+}
+
+.cl-row:last-child { border-bottom: none; }
+
+.cl-box_ {
+  width: 16px; height: 16px;
+  border: 1.5px solid var(--black);
+  flex-shrink: 0;
+}
+
+/* HELP */
+.hg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--gray-5);
+  border: 1px solid var(--gray-5);
+  margin-bottom: 20px;
+}
+
+.hc {
+  background: var(--white);
+  padding: 18px 20px;
+}
+
+.hc h4 {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.hc p { font-size: 12.5px; color: var(--gray-3); line-height: 1.6; }
+
+.hotline {
+  background: var(--red);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.hl-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 4px;
+}
+
+.hl-num {
+  font-family: var(--mono);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.05em;
+}
+
+.hl-note {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: rgba(255,255,255,0.6);
+  text-align: right;
+  line-height: 2;
+  letter-spacing: 0.05em;
+}
+
+.parents {
+  border: 1px solid var(--gray-5);
+  padding: 18px 22px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: var(--gray-2);
+  line-height: 1.75;
+}
+
+.parents strong {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.final {
+  background: var(--black);
+  padding: 32px 36px;
+  position: relative;
+}
+
+.final::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--red);
+}
+
+.final-title {
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.final p {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 13.5px;
+  color: var(--gray-4);
+  line-height: 1.75;
+}
+
+/* PAGE FOOTER */
+.pf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 36px;
+  background: var(--gray-6);
+  border-top: 1px solid var(--gray-5);
+}
+
+.pf-text {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--gray-4);
+  letter-spacing: 0.05em;
+}
+
+/* PRINT BTN */
+.print-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--black);
+  color: var(--white);
+  border: 2px solid var(--red);
+  border-radius: 0;
+  padding: 12px 22px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 99;
+  transition: background 0.15s, color 0.15s;
+}
+
+.print-btn:hover {
+  background: var(--red);
+  color: var(--white);
+}
+
+@media (max-width: 580px) {
+  .two-col, .vs, .cq-grid, .rg, .hg { grid-template-columns: 1fr; }
+  .cq-card.full, .ri.full { grid-column: auto; }
+  .soc-ul { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .cover { padding: 40px 28px; min-height: auto; }
+  .cover h1 { font-size: 28px; }
+  .pb { padding: 24px 20px; }
+  .hotline { flex-direction: column; gap: 10px; text-align: center; }
+  .hl-note { text-align: center; }
+  .safe-list li { grid-template-columns: 36px 1fr; }
+}
+
+@media print {
+  @page { size: A4 landscape; margin: 8mm; }
+  nav, .print-btn { display: none !important; }
+  body { background: #fff; }
+  main { padding: 0; max-width: 100%; }
+  .page { break-inside: avoid; margin-bottom: 8px; }
+}
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-title">Стероиды: <span>правда и мифы</span></div>
+  <span class="nav-brand">БУКЛЕТ / <b>СТЕРОИДЫ</b></span>
   <div class="nav-links">
-    <a href="#s1">Что это?</a>
-    <a href="#s2">Мифы</a>
-    <a href="#s3">Последствия</a>
-    <a href="#s4">Причины</a>
-    <a href="#s5">Безопасно</a>
-    <a href="#s6">Помощь</a>
+    <a href="#s1">01</a>
+    <a href="#s2">02</a>
+    <a href="#s3">03</a>
+    <a href="#s4">04</a>
+    <a href="#s5">05</a>
+    <a href="#s6">06</a>
   </div>
 </nav>
 
 <main>
 
-  <!-- COVER -->
-  <div class="section">
+  <!-- ОБЛОЖКА -->
+  <div class="page">
     <div class="cover">
-      <div class="cover-tag">Профилактический буклет</div>
-      <h1>Анаболические стероиды:<br><span>правда и мифы</span></h1>
-      <p class="cover-sub">Что нужно знать подростку о «быстрых мышцах»</p>
-
-      <div class="cover-icons">
-        <svg width="72" height="90" viewBox="0 0 72 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="36" cy="13" r="11" fill="rgba(255,255,255,0.9)"/>
-          <rect x="24" y="27" width="24" height="30" rx="5" fill="rgba(255,255,255,0.9)"/>
-          <rect x="10" y="30" width="12" height="22" rx="5" fill="rgba(255,255,255,0.9)"/>
-          <rect x="50" y="30" width="12" height="22" rx="5" fill="rgba(255,255,255,0.9)"/>
-          <rect x="25" y="59" width="9" height="26" rx="4" fill="rgba(255,255,255,0.9)"/>
-          <rect x="38" y="59" width="9" height="26" rx="4" fill="rgba(255,255,255,0.9)"/>
-          <rect x="6" y="44" width="8" height="10" rx="2" fill="rgba(249,115,22,0.85)"/>
-          <rect x="58" y="44" width="8" height="10" rx="2" fill="rgba(249,115,22,0.85)"/>
-        </svg>
-
-        <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="27" cy="27" r="26" fill="#f97316" fill-opacity="0.2" stroke="#f97316" stroke-width="2"/>
-          <circle cx="27" cy="27" r="20" fill="#f97316"/>
-          <text x="27" y="35" text-anchor="middle" font-size="26" fill="#fff" font-family="sans-serif" font-weight="900">!</text>
-        </svg>
-
-        <svg width="44" height="72" viewBox="0 0 44 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="15" y="0" width="14" height="22" rx="7" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-          <rect x="7" y="18" width="30" height="44" rx="5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
-          <line x1="22" y1="26" x2="22" y2="54" stroke="rgba(255,255,255,0.4)" stroke-width="1" stroke-dasharray="4 3"/>
-          <circle cx="22" cy="33" r="3" fill="rgba(249,115,22,0.9)"/>
-          <circle cx="22" cy="43" r="3" fill="rgba(249,115,22,0.9)"/>
-          <circle cx="22" cy="53" r="3" fill="rgba(249,115,22,0.9)"/>
-        </svg>
+      <div class="cover-line"></div>
+      <div class="cover-grid"></div>
+      <div>
+        <div class="cover-label">Профилактический буклет · 2025</div>
+        <h1>Анаболические<br>стероиды:<br><em>правда и мифы</em></h1>
+        <p class="cover-sub">Что нужно знать подростку о «быстрых мышцах» — без иллюзий и мифов</p>
       </div>
-
-      <div class="slogan">🏋️ Здоровье важнее быстрых результатов!</div>
-
-      <div class="audience-tags">
-        <span class="aud-tag">Подростки 14–19 лет</span>
-        <span class="aud-tag">Родители</span>
-        <span class="aud-tag">Тренеры</span>
+      <div class="cover-bottom">
+        <div class="slogan">
+          Здоровье важнее<br>быстрых результатов
+        </div>
+        <div class="aud-list">
+          Подростки 14–19 лет<br>
+          Родители<br>
+          Тренеры
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- PAGE 1 -->
-  <div class="section" id="s1">
-    <div class="page-header">
-      <div class="page-num">1</div>
+  <!-- 01 -->
+  <div class="page" id="s1">
+    <div class="ph">
+      <div class="ph-num">01</div>
       <h2>Что такое анаболические стероиды?</h2>
     </div>
-    <div class="page-body">
-      <div class="def-box">
-        <strong>Анаболические стероиды</strong> — синтетические аналоги тестостерона, ускоряющие рост мышц. В медицине применяются легально только по назначению врача — при тяжёлых заболеваниях, после операций или при истощении.
+    <div class="pb">
+      <div class="def">
+        <p><strong>Анаболические стероиды</strong> — синтетические аналоги тестостерона, ускоряющие рост мышц. В медицине применяются легально только по назначению врача — при тяжёлых заболеваниях, после операций или при истощении.</p>
       </div>
 
-      <p style="font-size:11px;font-weight:800;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Два пути к мышцам</p>
-
-      <div class="vs-wrap">
-        <div class="vs-side nat">
-          <h4>✅ Натуральный путь</h4>
-          <p>Питание + Тренировки + Сон<br>→ Медленный, устойчивый, <strong>безопасный</strong> рост</p>
+      <div class="vs" style="margin-bottom:24px;">
+        <div class="vs-col a">
+          <h4>✓ Натуральный путь</h4>
+          <p>Питание + Тренировки + Сон<br>→ Медленный, устойчивый, безопасный рост без рисков для здоровья</p>
         </div>
-        <div class="vs-label">vs</div>
-        <div class="vs-side ster">
-          <h4>⚠️ На стероидах</h4>
-          <p>Быстрый рост мышц<br>→ Серьёзные <strong>необратимые</strong> риски для здоровья</p>
+        <div class="vs-mid">VS</div>
+        <div class="vs-col b">
+          <h4>✗ На стероидах</h4>
+          <p>Быстрый рост мышц<br>→ Серьёзные, часто необратимые последствия для организма</p>
         </div>
       </div>
 
       <div class="two-col">
-        <div class="info-card green">
-          <h4>💊 Легальное применение</h4>
+        <div class="tc-card ok">
+          <h4>✓ Легальное применение</h4>
           <p>Только в медицине, только по рецепту врача, со строгим контролем дозировки и сроков.</p>
         </div>
-        <div class="info-card red">
-          <h4>⚠️ Особая опасность для подростков</h4>
-          <p>Организм ещё растёт, гормональная система нестабильна — риск необратимых последствий максимален.</p>
+        <div class="tc-card warn">
+          <h4>✗ Опасность для подростков</h4>
+          <p>Организм ещё растёт, гормональная система нестабильна — риск максимален.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- PAGE 2 -->
-  <div class="section" id="s2">
-    <div class="page-header">
-      <div class="page-num">2</div>
+  <!-- 02 -->
+  <div class="page" id="s2">
+    <div class="ph">
+      <div class="ph-num">02</div>
       <h2>Мифы и реальность</h2>
     </div>
-    <div class="page-body">
-      <table class="myth-table">
+    <div class="pb" style="padding:0;">
+      <table class="mt">
         <thead>
           <tr>
-            <th>❌ Миф</th>
-            <th>✅ Реальность</th>
+            <th>✗ Миф</th>
+            <th>✓ Реальность</th>
           </tr>
         </thead>
         <tbody>
@@ -687,7 +779,7 @@
           </tr>
           <tr>
             <td>«Без стероидов невозможно накачаться»</td>
-            <td>Многие топовые атлеты тренируются без стероидов. Прогресс реален за счёт режима, питания и грамотных тренировок.</td>
+            <td>Многие топовые атлеты тренируются без стероидов. Прогресс реален за счёт режима и тренировок.</td>
           </tr>
           <tr>
             <td>«Если пить недолго, вреда не будет»</td>
@@ -702,45 +794,46 @@
     </div>
   </div>
 
-  <!-- PAGE 3 -->
-  <div class="section" id="s3">
-    <div class="page-header">
-      <div class="page-num">3</div>
+  <!-- 03 -->
+  <div class="page" id="s3">
+    <div class="ph">
+      <div class="ph-num">03</div>
       <h2>Последствия употребления</h2>
     </div>
-    <div class="page-body">
+    <div class="pb">
 
-      <div class="body-wrap">
-        <svg width="340" height="140" viewBox="0 0 340 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="170" cy="24" r="18" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
-          <text x="170" y="28" text-anchor="middle" font-size="11" fill="#1e40af" font-family="Nunito,sans-serif" font-weight="800">Мозг</text>
+      <div class="diagram">
+        <svg width="420" height="150" viewBox="0 0 420 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- центр - силуэт -->
+          <circle cx="210" cy="28" r="20" fill="none" stroke="#c8102e" stroke-width="1.5"/>
+          <text x="210" y="33" text-anchor="middle" font-size="11" fill="#f5f5f0" font-family="IBM Plex Mono,monospace" font-weight="700">МОЗГ</text>
 
-          <rect x="146" y="46" width="48" height="34" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
-          <text x="170" y="62" text-anchor="middle" font-size="11" fill="#991b1b" font-family="Nunito,sans-serif" font-weight="800">Сердце</text>
-          <text x="170" y="74" text-anchor="middle" font-size="9" fill="#b91c1c" font-family="Nunito,sans-serif">давление</text>
+          <rect x="186" y="53" width="48" height="34" rx="0" fill="none" stroke="#c8102e" stroke-width="1.5"/>
+          <text x="210" y="70" text-anchor="middle" font-size="11" fill="#f5f5f0" font-family="IBM Plex Mono,monospace" font-weight="700">СЕРДЦЕ</text>
+          <text x="210" y="82" text-anchor="middle" font-size="9" fill="#888" font-family="IBM Plex Mono,monospace">давление</text>
 
-          <rect x="148" y="84" width="44" height="28" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
-          <text x="170" y="102" text-anchor="middle" font-size="11" fill="#92400e" font-family="Nunito,sans-serif" font-weight="800">Печень</text>
+          <rect x="188" y="92" width="44" height="28" rx="0" fill="none" stroke="#888" stroke-width="1"/>
+          <text x="210" y="110" text-anchor="middle" font-size="11" fill="#f5f5f0" font-family="IBM Plex Mono,monospace" font-weight="700">ПЕЧЕНЬ</text>
 
-          <ellipse cx="80" cy="80" rx="36" ry="18" fill="#f3e8ff" stroke="#9333ea" stroke-width="1.5"/>
-          <text x="80" y="84" text-anchor="middle" font-size="11" fill="#6b21a8" font-family="Nunito,sans-serif" font-weight="800">Мышцы</text>
+          <rect x="60" y="72" width="80" height="28" rx="0" fill="none" stroke="#5b21b6" stroke-width="1"/>
+          <text x="100" y="90" text-anchor="middle" font-size="11" fill="#f5f5f0" font-family="IBM Plex Mono,monospace" font-weight="700">МЫШЦЫ</text>
 
-          <ellipse cx="262" cy="100" rx="40" ry="18" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
-          <text x="262" y="97" text-anchor="middle" font-size="10" fill="#9d174d" font-family="Nunito,sans-serif" font-weight="800">Репродуктивная</text>
-          <text x="262" y="109" text-anchor="middle" font-size="10" fill="#9d174d" font-family="Nunito,sans-serif" font-weight="800">система</text>
+          <rect x="285" y="88" width="100" height="28" rx="0" fill="none" stroke="#1e40af" stroke-width="1"/>
+          <text x="335" y="100" text-anchor="middle" font-size="9" fill="#f5f5f0" font-family="IBM Plex Mono,monospace" font-weight="700">РЕПРОДУКТИВНАЯ</text>
+          <text x="335" y="110" text-anchor="middle" font-size="9" fill="#f5f5f0" font-family="IBM Plex Mono,monospace" font-weight="700">СИСТЕМА</text>
 
-          <line x1="170" y1="42" x2="170" y2="46" stroke="#94a3b8" stroke-width="1.5"/>
-          <line x1="170" y1="80" x2="170" y2="84" stroke="#94a3b8" stroke-width="1.5"/>
-          <line x1="146" y1="66" x2="116" y2="72" stroke="#94a3b8" stroke-width="1.5"/>
-          <line x1="194" y1="72" x2="222" y2="90" stroke="#94a3b8" stroke-width="1.5"/>
+          <line x1="210" y1="48" x2="210" y2="53" stroke="#c8102e" stroke-width="1"/>
+          <line x1="210" y1="87" x2="210" y2="92" stroke="#888" stroke-width="1"/>
+          <line x1="186" y1="72" x2="140" y2="82" stroke="#5b21b6" stroke-width="1" stroke-dasharray="4 3"/>
+          <line x1="234" y1="82" x2="285" y2="98" stroke="#1e40af" stroke-width="1" stroke-dasharray="4 3"/>
 
-          <text x="8" y="18" font-size="9" fill="#94a3b8" font-family="Nunito,sans-serif" font-weight="700">Зоны риска</text>
+          <text x="8" y="20" font-size="9" fill="#4a4a4a" font-family="IBM Plex Mono,monospace" letter-spacing="0.1em">ЗОНЫ РИСКА</text>
         </svg>
       </div>
 
-      <div class="conseq-grid">
-        <div class="conseq-card phys">
-          <h4>🔴 Физические</h4>
+      <div class="cq-grid">
+        <div class="cq-card phys">
+          <h4>Физические</h4>
           <ul>
             <li>Гормональные нарушения</li>
             <li>Уменьшение яичек, гинекомастия</li>
@@ -750,8 +843,8 @@
             <li>Нарушение роста костей</li>
           </ul>
         </div>
-        <div class="conseq-card ment">
-          <h4>🟣 Психические</h4>
+        <div class="cq-card ment">
+          <h4>Психические</h4>
           <ul>
             <li>«Стероидная ярость»</li>
             <li>Резкие перепады настроения</li>
@@ -759,157 +852,153 @@
             <li>Психологическая зависимость</li>
           </ul>
         </div>
-        <div class="conseq-card soc">
-          <h4>🔵 Социальные последствия</h4>
-          <ul class="soc-grid">
+        <div class="cq-card soc full">
+          <h4>Социальные</h4>
+          <ul class="soc-ul">
             <li>Дисквалификация из спорта</li>
             <li>Конец спортивной карьеры</li>
             <li>Физическая зависимость</li>
-            <li>Уголовная ответственность (оборот)</li>
+            <li>Уголовная ответственность</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- PAGE 4 -->
-  <div class="section" id="s4">
-    <div class="page-header">
-      <div class="page-num">4</div>
+  <!-- 04 -->
+  <div class="page" id="s4">
+    <div class="ph">
+      <div class="ph-num">04</div>
       <h2>Почему подростки рискуют?</h2>
     </div>
-    <div class="page-body">
-      <div class="reasons-grid">
-        <div class="reason-item">
-          <span class="r-icon">⚡</span>
-          <div><strong>Желание быстрых результатов</strong> — хочется мышцы «здесь и сейчас», не ждать</div>
+    <div class="pb">
+      <div class="rg">
+        <div class="ri">
+          <div class="ri-label">Быстрый результат</div>
+          Желание получить мышцы «здесь и сейчас», нетерпеливость и неготовность ждать.
         </div>
-        <div class="reason-item">
-          <span class="r-icon">👥</span>
-          <div><strong>Давление в зале</strong> — «все на курсе», не хочется выглядеть слабее</div>
+        <div class="ri">
+          <div class="ri-label">Давление среды</div>
+          «Все на курсе» — социальное давление в зале, нежелание выглядеть слабее других.
         </div>
-        <div class="reason-item">
-          <span class="r-icon">📱</span>
-          <div><strong>Блогеры и соцсети</strong> — опасные советы от «инфлюенсеров» и реклама БАДов</div>
+        <div class="ri">
+          <div class="ri-label">Влияние соцсетей</div>
+          Опасные советы блогеров, реклама БАДов и «безопасных» курсов в интернете.
         </div>
-        <div class="reason-item">
-          <span class="r-icon">🪞</span>
-          <div><strong>Низкая самооценка</strong> — недовольство своим телом, желание измениться быстро</div>
+        <div class="ri">
+          <div class="ri-label">Самооценка</div>
+          Недовольство своим телом, желание кардинально изменить внешность как можно быстрее.
         </div>
-        <div class="reason-item full">
-          <span class="r-icon">💬</span>
-          <div><strong>Вера в мифы о безопасности</strong> — убеждённость, что «правильный» курс не навредит</div>
+        <div class="ri full">
+          <div class="ri-label">Вера в мифы</div>
+          Убеждённость, что «правильный» курс не навредит, что побочки — только у тех, кто не умеет.
         </div>
       </div>
 
-      <div class="motivate">
-        «Ты не обязан соответствовать чужим ожиданиям! Настоящий прогресс — это постепенный рост без вреда здоровью. Сравнивай себя только с собой вчерашним.»
+      <div class="quote-block">
+        Ты не обязан соответствовать чужим ожиданиям. Настоящий прогресс — это постепенный рост без вреда здоровью. Сравнивай себя только с собой вчерашним.
       </div>
     </div>
   </div>
 
-  <!-- PAGE 5 -->
-  <div class="section" id="s5">
-    <div class="page-header">
-      <div class="page-num">5</div>
+  <!-- 05 -->
+  <div class="page" id="s5">
+    <div class="ph">
+      <div class="ph-num">05</div>
       <h2>Как добиться результатов безопасно</h2>
     </div>
-    <div class="page-body">
+    <div class="pb">
       <ul class="safe-list">
         <li>
-          <div class="s-icon">🏋️</div>
-          <div><strong>Тренировки</strong> — постепенное увеличение нагрузки, обязательный отдых между тренировками, грамотная программа под твои цели.</div>
+          <div class="si-num">01</div>
+          <div class="si-body"><strong>Тренировки</strong> — постепенное увеличение нагрузки, обязательный отдых, грамотная программа под твои цели.</div>
         </li>
         <li>
-          <div class="s-icon">🥩</div>
-          <div><strong>Питание</strong> — белок (мясо, рыба, яйца, творог), сложные углеводы (крупы, цельный хлеб), овощи и фрукты, достаточно воды.</div>
+          <div class="si-num">02</div>
+          <div class="si-body"><strong>Питание</strong> — белок (мясо, рыба, яйца, творог), сложные углеводы, овощи и фрукты, достаточно воды.</div>
         </li>
         <li>
-          <div class="s-icon">😴</div>
-          <div><strong>Режим</strong> — 7–9 часов сна, минимизация стресса. Мышцы растут именно во время отдыха, а не на тренировке!</div>
+          <div class="si-num">03</div>
+          <div class="si-body"><strong>Режим</strong> — 7–9 часов сна, минимизация стресса. Мышцы растут во время отдыха, а не на тренировке.</div>
         </li>
         <li>
-          <div class="s-icon">👨‍⚕️</div>
-          <div><strong>Поддержка специалистов</strong> — работа с опытным тренером, плановые консультации спортивного врача.</div>
+          <div class="si-num">04</div>
+          <div class="si-body"><strong>Специалисты</strong> — работа с опытным тренером, консультации спортивного врача.</div>
         </li>
         <li>
-          <div class="s-icon">🎯</div>
-          <div><strong>Реалистичные цели</strong> — ставь конкретные достижимые задачи, отслеживай прогресс и радуйся каждому шагу вперёд.</div>
+          <div class="si-num">05</div>
+          <div class="si-body"><strong>Цели</strong> — ставь конкретные достижимые задачи, отслеживай прогресс, отмечай каждый шаг.</div>
         </li>
       </ul>
 
-      <div class="checklist-box">
-        <h4>✅ Мой план здорового роста:</h4>
-        <div class="check-row"><div class="chk"></div> Тренировка 3–4 раза в неделю</div>
-        <div class="check-row"><div class="chk"></div> Сбалансированное питание каждый день</div>
-        <div class="check-row"><div class="chk"></div> 8 часов сна</div>
-        <div class="check-row"><div class="chk"></div> Консультация с тренером</div>
-        <div class="check-row"><div class="chk"></div> Никаких стероидов — мой выбор!</div>
+      <div class="cl-box">
+        <h4>Мой план здорового роста</h4>
+        <div class="cl-row"><div class="cl-box_"></div> Тренировка 3–4 раза в неделю</div>
+        <div class="cl-row"><div class="cl-box_"></div> Сбалансированное питание каждый день</div>
+        <div class="cl-row"><div class="cl-box_"></div> 8 часов сна</div>
+        <div class="cl-row"><div class="cl-box_"></div> Консультация с тренером</div>
+        <div class="cl-row"><div class="cl-box_"></div> Никаких стероидов — мой выбор</div>
       </div>
     </div>
   </div>
 
-  <!-- PAGE 6 -->
-  <div class="section" id="s6">
-    <div class="page-header">
-      <div class="page-num">6</div>
+  <!-- 06 -->
+  <div class="page" id="s6">
+    <div class="ph">
+      <div class="ph-num">06</div>
       <h2>Куда обратиться за помощью</h2>
     </div>
-    <div class="page-body">
-
-      <div class="help-grid">
-        <div class="help-card">
-          <h4>🏫 Школьный врач / педагог</h4>
+    <div class="pb">
+      <div class="hg">
+        <div class="hc">
+          <h4>Школьный врач / педагог</h4>
           <p>Анонимная беседа, поддержка и направление к нужному специалисту без огласки.</p>
         </div>
-        <div class="help-card">
-          <h4>🩺 Спортивный врач</h4>
+        <div class="hc">
+          <h4>Спортивный врач</h4>
           <p>Проверка здоровья, составление индивидуального плана тренировок и питания.</p>
         </div>
-        <div class="help-card">
-          <h4>🌐 Онлайн-ресурсы</h4>
-          <p>rusada.ru, who.int, minzdrav.gov.ru — только проверенная информация о спорте и здоровье.</p>
+        <div class="hc">
+          <h4>Онлайн-ресурсы</h4>
+          <p>rusada.ru · who.int · minzdrav.gov.ru — только проверенная информация.</p>
         </div>
-        <div class="help-card">
-          <h4>💬 Доверенный взрослый</h4>
-          <p>Родитель, старший брат или сестра, наставник — не бойся обратиться за советом и поддержкой.</p>
+        <div class="hc">
+          <h4>Доверенный взрослый</h4>
+          <p>Родитель, старший брат или сестра, наставник — не бойся обратиться за советом.</p>
         </div>
       </div>
 
       <div class="hotline">
-        📞 Телефон доверия для подростков (РФ)
-        <span class="number">8-800-2000-122</span>
-        <div class="note">Звонок бесплатный · Круглосуточно · Анонимно</div>
+        <div>
+          <div class="hl-label">Телефон доверия для подростков (РФ)</div>
+          <div class="hl-num">8-800-2000-122</div>
+        </div>
+        <div class="hl-note">
+          Звонок бесплатный<br>
+          Круглосуточно<br>
+          Анонимно
+        </div>
       </div>
 
-      <div class="parents-box">
-        <strong>👨‍👩‍👦 Для родителей — признаки тревоги:</strong>
-        Резкие изменения поведения и настроения · Появление ампул, шприцев или таблеток · Повышенная агрессивность · Неестественно быстрый рост мышц · Скрытность и замкнутость · Нарушения сна
+      <div class="parents">
+        <strong>Для родителей — признаки тревоги</strong>
+        Резкие изменения поведения и настроения · Появление ампул, шприцев или таблеток · Повышенная агрессивность · Неестественно быстрый рост мышц · Скрытность · Нарушения сна
       </div>
 
-      <div class="final-box">
-        <span class="final-title">Твой организм — единственный, который у тебя есть.</span>
-        <p>Инвестируй в него разумно: тренировки, питание, отдых.<br>Настоящие достижения — это здоровье и сила без химии!</p>
+      <div class="final">
+        <div class="final-title">Твой организм — единственный, который у тебя есть.</div>
+        <p>Инвестируй в него разумно: тренировки, питание, отдых.<br>Настоящие достижения — это здоровье и сила без химии.</p>
       </div>
     </div>
-    <div class="page-footer">
-      <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="52" height="52" rx="6" fill="#f1f5f9"/>
-        <rect x="4" y="4" width="20" height="20" rx="2" fill="#cbd5e1"/>
-        <rect x="28" y="4" width="20" height="20" rx="2" fill="#cbd5e1"/>
-        <rect x="4" y="28" width="20" height="20" rx="2" fill="#cbd5e1"/>
-        <rect x="28" y="28" width="9" height="9" rx="1" fill="#cbd5e1"/>
-        <rect x="39" y="28" width="9" height="9" rx="1" fill="#cbd5e1"/>
-        <rect x="28" y="39" width="9" height="9" rx="1" fill="#cbd5e1"/>
-        <text x="26" y="50" text-anchor="middle" font-size="6" fill="#94a3b8" font-family="Nunito,sans-serif">QR-код</text>
-      </svg>
-      <div>Электронная версия буклета · Распространяется бесплатно в образовательных целях · Буклет можно распечатать (Ctrl+P / ⌘P)</div>
+    <div class="pf">
+      <span class="pf-text">Буклет распространяется бесплатно в образовательных целях</span>
+      <span class="pf-text">Нажми кнопку ниже для печати</span>
     </div>
   </div>
 
 </main>
 
-<button class="print-btn" onclick="window.print()">🖨️ Распечатать буклет</button>
+<button class="print-btn" onclick="window.print()">Распечатать →</button>
 
 </body>
 </html>
